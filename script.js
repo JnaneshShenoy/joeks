@@ -1,4 +1,4 @@
-// script.js
+let darkMode = false;
 
 // Function to fetch a random dad joke
 async function fetchDadJoke() {
@@ -28,4 +28,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   const jokeText = await fetchDadJoke();
   const jokeElement = document.getElementById("jokeElement");
   jokeElement.innerHTML = jokeText;
+});
+
+// Toggle between dark and light themes
+document.getElementById("toggleTheme").addEventListener("click", () => {
+  darkMode = !darkMode;
+  document.body.classList.toggle("dark", darkMode);
+  document.getElementById("toggleTheme").src = darkMode
+    ? "moon.svg"
+    : "sun.svg";
 });

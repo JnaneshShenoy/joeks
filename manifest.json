@@ -1,5 +1,5 @@
 {
-   "name": "jeoks",
+   "name": "joeks",
    "version": "0.0.1",
    "manifest_version": 3,
    "action": {
@@ -9,9 +9,14 @@
    "icons": {
      "128": "icon.png"
    },
-   "permissions": ["activeTab"],
+   "permissions": ["activeTab", "storage"],
    "background": {
      "service_worker": "background.js",
      "type": "module"
+   },
+   "content_security_policy": {
+     "script-src": "self",
+     "object-src": "self"
    }
  }
+ 

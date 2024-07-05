@@ -1,59 +1,80 @@
-/* Reset some default browser styles */
 * {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
- }
- 
- body {
-   font-family: 'Montserrat', sans-serif;
-   background-color: #f7f7f7;
-   width: 320px; /* Reduced width */
-   height: 240px; /* Reduced height */
-   border-radius: 10px;
-   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   padding: 20px;
-   position: relative; /* For positioning the button */
- }
- 
- .container {
-   width: 100%;
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
- }
- 
- #jokeElement {
-   font-size: 18px; /* Adjusted font size */
-   font-weight: bold;
-   color: #333;
-   margin-bottom: 20px;
-   text-align: center;
-   overflow-y: auto; /* Enable vertical scrolling */
-   max-height: 120px; /* Maximum height for the joke text */
-   width: 100%; /* Full width */
-   padding-right: 10px; /* Add some padding to avoid content being cut off */
- }
- 
- button {
-   background-color: #4CAF50;
-   color: #fff;
-   border: none;
-   padding: 10px 20px;
-   font-size: 14px; /* Adjusted font size */
-   cursor: pointer;
-   border-radius: 5px;
-   position: absolute; /* Fixed positioning */
-   bottom: 20px; /* Positioned 20px from the bottom */
- }
- 
- button:hover {
-   background-color: #3e8e41;
- }
- 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  width: 320px;
+  height: 240px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+:root {
+  --bg-color: #f0f0f5;
+  --text-color: #333;
+  --button-bg-color: #4caf50;
+  --button-hover-bg-color: #3e8e41;
+}
+
+body.dark {
+  --bg-color: #2c2c2c;
+  --text-color: #f0f0f5;
+  --button-bg-color: #555555;
+  --button-hover-bg-color: #666666;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#jokeElement {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  text-align: center;
+  overflow-y: auto;
+  max-height: 120px;
+  width: 100%;
+  padding-right: 10px;
+}
+
+button {
+  background-color: var(--button-bg-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+.theme-toggle img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
